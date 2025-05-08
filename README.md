@@ -2,31 +2,51 @@
 Change the default Language during ESP
 
 .SYNOPSIS
-   Win32App for setting the default Language during Intune Autopilot ESP
+
+Win32App for setting the default Language during Intune Autopilot ESP
+
 .DESCRIPTION
-   Target Devices to set the default language during Intune Autopilot ESP Device phase
+
+Target Devices to set the default language during Intune Autopilot ESP Device phase
+
 .AUTHOR
-   Marco Sap
+
+Marco Sap
+
 .VERSION
-   1.0 - 08-05-2025
+
+1.0 - 08-05-2025
+
 .EXAMPLE
 
+
 Create Win32App (download tool at https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool)
+
 C:\IntuneApp\IntuneWinAppUtil.exe -c "C:\IntuneApp\OOBELanguage" -s Invoke-Language.ps1 -o C:\IntuneApp -q
 
+
 Install Command: 
+
 C:\Windows\SysNative\WindowsPowerShell\v1.0\Powershell.exe -ExecutionPolicy Bypass -File .\Invoke-Language.ps1 -Install
 
 C:\Windows\SysNative\WindowsPowerShell\v1.0\Powershell.exe -ExecutionPolicy Bypass -File .\Invoke-Language.ps1 -Install -Language nl-NL
 
+
 Uninstall Command:
+
 C:\Windows\SysNative\WindowsPowerShell\v1.0\Powershell.exe -ExecutionPolicy Bypass -File .\Invoke-Language.ps1 -Uninstall
 
+
 Detection rule:
+
 Manual configure detection rules
+
 Rule Type: Registry
+
 Key path: Computer\HKEY_LOCAL_MACHINE\Software\Intune\Language
+
 Value name: 1.0-Success
+
 Detection methode: Value exists
 
 .DISCLAIMER
